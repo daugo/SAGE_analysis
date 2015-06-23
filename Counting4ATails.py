@@ -38,7 +38,6 @@ for record in SeqIO.parse(handle, "fasta") :
     print positions
     indexes.write(positions + "\n")
     
-
     #break
      
 handle.close()

@@ -2,3 +2,4 @@
 *.fasta
 
 *.gtf
+.Rproj.user
