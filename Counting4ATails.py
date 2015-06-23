@@ -34,7 +34,9 @@ for record in SeqIO.parse(handle, "fasta") :
     count =  str(record.id) +" ,"+ str(len(extended)) + ", "+ str(len(index))
     print count
     frequences.write(count + "\n")
-    print str(record.id) + ", " + str(len(extended)) + ", " + str(index)[1:-1]
+    positions = str(record.id) + ", " + str(len(extended)) + ", " + str(index)[1:-1]
+    print positions
+    indexes.write(positions + "\n")
     
 
     #break
