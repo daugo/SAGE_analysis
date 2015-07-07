@@ -1,12 +1,51 @@
-D Order
-DE Read paper
-D Run everything
-DE Alternative SAGEinsilico
-	Hmmer for identifiying UTRs
-	More than one target per gene
-	Do not take into account the transcripts that do not have downstream regions
+D 	Order
+DE 	Read paper
+D 	Run everything
+DE 	Alternative SAGEinsilico
+		Hmmer for identifiying UTRs
+		More than one target per gene
+		Do not take into account the transcripts that do not have downstream regions
+
+
+
+SAGE-insilico NOW
+
+Extended regions: t+UTR
+Restriction sites (30bps or less)
+Reads (30bps)
+
+0. Count the number of reads per transcript  (Reads are unique)
+	timescolapse
+
+1. Create transcript + UTR (sequence 1000 bps)  
+	Extract_targetRegions.pl
+	"./phytophthora_data/phytophthora_infestans_t30-4_1_supercontigsSAGE_Targets_1000.fasta"
+		
+2. Identify all restrictions sites  (30 bps sequences)
+	SAGE_insilico.pl
+
+3. Map all restriction sites to reads
+	Reads are BLAST database
+
+4. Save results in SQL database
+	blastResults2table.pl
+	(restrictionS, read, (identity) % of matching, alignment_len, mismatches, gaps, ...)
+
+4.1. Filter per restriction sites with less than 30 bps
+
+4.2. Filter per rightest restriction site
+
+5. Select results with alignment_len equal to restrictionS_len and identity of 100%
+
+6. Count the right matches between targets and reads
+
+7. Select pairs with one to one relation (bidirectional): unitags
+
+
+
+Possible problems
 
 
 
 
-
+	
