@@ -1,0 +1,12 @@
+D Order
+DE Read paper
+D Run everything
+DE Alternative SAGEinsilico
+	Hmmer for identifiying UTRs
+	More than one target per gene
+	Do not take into account the transcripts that do not have downstream regions
+
+
+
+
+
