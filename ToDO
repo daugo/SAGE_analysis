@@ -46,6 +46,7 @@ Reads (30bps)
 Possible problems
 Transcripts without 1000bps of UTR (or no downstream regions)
 Rightest restriction site in the 1000bps is not inside the UTR
+A significative quantity of genes are been discarded
 
 
 
