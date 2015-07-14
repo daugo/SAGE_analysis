@@ -49,6 +49,10 @@ Rightest restriction site in the 1000bps is not inside the UTR
 A significative quantity of genes are been discarded
 
 
+#Install bio-perl
+cpan
+install Bundle::BioPerl
+
 
 
 	
